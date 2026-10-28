@@ -1,0 +1,190 @@
+App.tsx(1,19): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+App.tsx(2,37): error TS2307: Cannot find module '@react-navigation/native' or its corresponding type declarations.
+App.tsx(3,44): error TS2307: Cannot find module '@react-navigation/native-stack' or its corresponding type declarations.
+App.tsx(4,27): error TS2307: Cannot find module 'expo-status-bar' or its corresponding type declarations.
+App.tsx(5,34): error TS2307: Cannot find module 'react-native-safe-area-context' or its corresponding type declarations.
+App.tsx(57,8): error TS2741: Property 'children' is missing in type '{}' but required in type '{ children: React.ReactNode; }'.
+App.tsx(58,10): error TS2741: Property 'children' is missing in type '{}' but required in type '{ children: React.ReactNode; }'.
+OfflineManager.ts(1,25): error TS2307: Cannot find module 'expo-sqlite' or its corresponding type declarations.
+OfflineManager.ts(2,27): error TS2307: Cannot find module 'expo-location' or its corresponding type declarations.
+OfflineManager.ts(3,22): error TS2307: Cannot find module 'expo-sms' or its corresponding type declarations.
+src/components/AppHeader.tsx(1,19): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/components/AppHeader.tsx(2,65): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/components/AppHeader.tsx(3,68): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/components/BottomNavigation.tsx(1,19): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/components/BottomNavigation.tsx(2,58): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/components/BottomNavigation.tsx(3,61): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/components/CategoryChip.tsx(1,19): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/components/CategoryChip.tsx(2,52): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/components/EmergencyMechanicRequest.tsx(1,33): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/components/EmergencyMechanicRequest.tsx(2,77): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/components/EmergencyMechanicRequest.tsx(3,98): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/components/EmptyState.tsx(1,19): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/components/EmptyState.tsx(2,40): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/components/FakeShutdownProvider.tsx(1,79): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/components/FakeShutdownProvider.tsx(2,82): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/components/FakeShutdownProvider.tsx(3,32): error TS2307: Cannot find module 'expo-navigation-bar' or its corresponding type declarations.
+src/components/FakeShutdownProvider.tsx(63,35): error TS2580: Cannot find name 'require'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+src/components/LiveMap.tsx(1,52): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/components/LiveMap.tsx(2,58): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/components/LiveMap.tsx(3,43): error TS2307: Cannot find module 'react-native-maps' or its corresponding type declarations.
+src/components/LiveMap.tsx(4,27): error TS2307: Cannot find module 'expo-location' or its corresponding type declarations.
+src/components/LiveMap.tsx(5,41): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/components/LoadingState.tsx(1,19): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/components/LoadingState.tsx(2,59): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/components/OrderCard.tsx(1,19): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/components/OrderCard.tsx(2,40): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/components/OrderCard.tsx(3,30): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/components/PaymentBox.tsx(1,53): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/components/PaymentBox.tsx(9,8): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/components/PaymentBox.tsx(10,77): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/components/ProductCard.tsx(1,19): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/components/ProductCard.tsx(2,58): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/components/ProductCard.tsx(3,36): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/components/ProfileField.tsx(1,19): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/components/ProfileField.tsx(2,51): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/components/ProfileField.tsx(3,23): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/components/ProfileHeader.tsx(1,19): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/components/ProfileHeader.tsx(2,58): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/components/ProfileHeader.tsx(3,38): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/components/ProfileSection.tsx(1,19): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/components/ProfileSection.tsx(2,40): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/components/QuickActionCard.tsx(1,19): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/components/QuickActionCard.tsx(2,58): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/components/QuickActionCard.tsx(3,30): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/components/ReviewReportBox.tsx(1,33): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/components/ReviewReportBox.tsx(10,8): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/components/ReviewReportBox.tsx(11,52): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/components/RoleBadge.tsx(1,19): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/components/RoleBadge.tsx(2,40): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/components/RoleBadge.tsx(3,46): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/components/SOSButton.tsx(1,44): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/components/SOSButton.tsx(2,65): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/components/SOSButton.tsx(3,27): error TS2307: Cannot find module 'expo-location' or its corresponding type declarations.
+src/components/SOSButton.tsx(4,22): error TS2307: Cannot find module 'expo-sms' or its corresponding type declarations.
+src/components/SOSButton.tsx(5,30): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/components/SOSButton.tsx(8,26): error TS2307: Cannot find module '@react-native-async-storage/async-storage' or its corresponding type declarations.
+src/components/StatCard.tsx(1,19): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/components/StatCard.tsx(2,40): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/components/StatusBadge.tsx(1,19): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/components/StatusBadge.tsx(2,40): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/components/StoreHeader.tsx(1,19): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/components/StoreHeader.tsx(2,69): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/components/StoreHeader.tsx(3,38): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/components/SubscriptionPackages.tsx(1,33): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/components/SubscriptionPackages.tsx(13,8): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/components/SubscriptionPackages.tsx(28,8): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/components/VehicleHealth.tsx(1,33): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/components/VehicleHealth.tsx(2,70): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/components/VehicleHealth.tsx(3,63): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/context/LanguageContext.tsx(1,69): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/hooks/useAccidentEmergencyMonitor.ts(1,27): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/hooks/useAccidentEmergencyMonitor.ts(2,23): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/hooks/useUnreadNotifications.ts(1,37): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/screens/AdminRevenue.tsx(1,19): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/screens/AdminRevenue.tsx(2,81): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/screens/AdminRevenue.tsx(3,30): error TS2307: Cannot find module 'react-native-safe-area-context' or its corresponding type declarations.
+src/screens/AdminRevenue.tsx(4,64): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/screens/AuthScreen.tsx(1,33): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/screens/AuthScreen.tsx(14,8): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/screens/AuthScreen.tsx(15,30): error TS2307: Cannot find module 'react-native-safe-area-context' or its corresponding type declarations.
+src/screens/AuthScreen.tsx(17,30): error TS2307: Cannot find module 'expo-image-picker' or its corresponding type declarations.
+src/screens/AuthScreen.tsx(18,38): error TS2307: Cannot find module 'expo-local-authentication' or its corresponding type declarations.
+src/screens/AuthScreen.tsx(19,27): error TS2307: Cannot find module 'expo-location' or its corresponding type declarations.
+src/screens/AuthScreen.tsx(22,112): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/screens/B2BDashboard.tsx(1,53): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/screens/B2BDashboard.tsx(2,77): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/screens/B2BDashboard.tsx(3,85): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/screens/B2BDashboard.tsx(4,33): error TS2307: Cannot find module 'react-native-maps' or its corresponding type declarations.
+src/screens/B2BDashboard.tsx(5,30): error TS2307: Cannot find module 'react-native-safe-area-context' or its corresponding type declarations.
+src/screens/CartScreen.tsx(1,44): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/screens/CartScreen.tsx(2,88): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/screens/CartScreen.tsx(3,30): error TS2307: Cannot find module 'react-native-safe-area-context' or its corresponding type declarations.
+src/screens/CartScreen.tsx(4,62): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/screens/CheckoutScreen.tsx(1,44): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/screens/CheckoutScreen.tsx(2,99): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/screens/CheckoutScreen.tsx(3,30): error TS2307: Cannot find module 'react-native-safe-area-context' or its corresponding type declarations.
+src/screens/CheckoutScreen.tsx(4,48): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/screens/CustomerDashboard.tsx(1,44): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/screens/CustomerDashboard.tsx(13,8): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/screens/CustomerDashboard.tsx(14,27): error TS2307: Cannot find module 'expo-location' or its corresponding type declarations.
+src/screens/DriverDashboard.tsx(1,44): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/screens/DriverDashboard.tsx(2,67): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/screens/DriverDashboard.tsx(3,30): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/screens/DriverDashboard.tsx(4,30): error TS2307: Cannot find module 'react-native-safe-area-context' or its corresponding type declarations.
+src/screens/DriverDashboard.tsx(5,27): error TS2307: Cannot find module 'expo-location' or its corresponding type declarations.
+src/screens/DriverDashboard.tsx(6,30): error TS2307: Cannot find module 'expo-task-manager' or its corresponding type declarations.
+src/screens/DriverDashboard.tsx(7,21): error TS2307: Cannot find module '@react-native-community/netinfo' or its corresponding type declarations.
+src/screens/MechanicDashboard.tsx(1,53): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/screens/MechanicDashboard.tsx(12,8): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/screens/MechanicDashboard.tsx(23,8): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/screens/MechanicDashboard.tsx(24,30): error TS2307: Cannot find module 'react-native-safe-area-context' or its corresponding type declarations.
+src/screens/NotificationScreen.tsx(1,44): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/screens/NotificationScreen.tsx(2,81): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/screens/NotificationScreen.tsx(3,30): error TS2307: Cannot find module 'react-native-safe-area-context' or its corresponding type declarations.
+src/screens/NotificationScreen.tsx(4,48): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/screens/NotificationScreen.tsx(31,46): error TS2322: Type '{ key: any; item: any; accent: string; onOpen: () => void; }' is not assignable to type '{ item: AppNotification; accent: string; onOpen: () => void; }'.
+  Property 'key' does not exist on type '{ item: AppNotification; accent: string; onOpen: () => void; }'.
+src/screens/OfflineAssistanceScreen.tsx(1,44): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/screens/OfflineAssistanceScreen.tsx(2,96): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/screens/OfflineAssistanceScreen.tsx(3,21): error TS2307: Cannot find module '@react-native-community/netinfo' or its corresponding type declarations.
+src/screens/OfflineAssistanceScreen.tsx(4,65): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/screens/OfflineAssistanceScreen.tsx(5,30): error TS2307: Cannot find module 'react-native-safe-area-context' or its corresponding type declarations.
+src/screens/ProductDetailsScreen.tsx(1,32): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/screens/ProductDetailsScreen.tsx(2,88): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/screens/ProductDetailsScreen.tsx(3,30): error TS2307: Cannot find module 'react-native-safe-area-context' or its corresponding type declarations.
+src/screens/ProductDetailsScreen.tsx(4,68): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/screens/ProfileScreen.tsx(1,53): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/screens/ProfileScreen.tsx(2,107): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/screens/ProfileScreen.tsx(3,30): error TS2307: Cannot find module 'react-native-safe-area-context' or its corresponding type declarations.
+src/screens/ProfileScreen.tsx(4,104): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/screens/ProfileScreen.tsx(124,10): error TS2741: Property 'children' is missing in type '{ title: string; accentColor: any; icon: any; }' but required in type 'Props'.
+src/screens/ProfileScreen.tsx(131,12): error TS2741: Property 'children' is missing in type '{ title: string; accentColor: any; icon: any; }' but required in type 'Props'.
+src/screens/ProfileScreen.tsx(138,12): error TS2741: Property 'children' is missing in type '{ title: string; accentColor: any; icon: any; }' but required in type 'Props'.
+src/screens/ProfileScreen.tsx(146,14): error TS2741: Property 'children' is missing in type '{ title: string; accentColor: any; icon: any; }' but required in type 'Props'.
+src/screens/ProfileScreen.tsx(150,14): error TS2741: Property 'children' is missing in type '{ title: string; accentColor: any; icon: any; }' but required in type 'Props'.
+src/screens/ProfileScreen.tsx(157,12): error TS2741: Property 'children' is missing in type '{ title: string; accentColor: any; icon: any; }' but required in type 'Props'.
+src/screens/ServiceHistoryScreen.tsx(1,53): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/screens/ServiceHistoryScreen.tsx(2,81): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/screens/ServiceHistoryScreen.tsx(3,30): error TS2307: Cannot find module 'react-native-safe-area-context' or its corresponding type declarations.
+src/screens/ServiceHistoryScreen.tsx(4,66): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/screens/ServiceHistoryScreen.tsx(41,64): error TS2322: Type '{ key: any; item: any; accent: string; }' is not assignable to type '{ item: ServiceHistoryItem; accent: string; }'.
+  Property 'key' does not exist on type '{ item: ServiceHistoryItem; accent: string; }'.
+src/screens/ServiceHistoryScreen.tsx(41,150): error TS2322: Type '{ key: any; order: any; accent: string; }' is not assignable to type '{ order: StoreOrder; accent: string; }'.
+  Property 'key' does not exist on type '{ order: StoreOrder; accent: string; }'.
+src/screens/ServiceScreen.tsx(1,44): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/screens/ServiceScreen.tsx(12,8): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/screens/ServiceScreen.tsx(13,30): error TS2307: Cannot find module 'react-native-safe-area-context' or its corresponding type declarations.
+src/screens/ServiceScreen.tsx(14,102): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/screens/ServiceScreen.tsx(15,27): error TS2307: Cannot find module 'expo-location' or its corresponding type declarations.
+src/screens/SettingsScreen.tsx(1,44): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/screens/SettingsScreen.tsx(11,8): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/screens/SettingsScreen.tsx(25,8): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/screens/SettingsScreen.tsx(26,30): error TS2307: Cannot find module 'react-native-safe-area-context' or its corresponding type declarations.
+src/screens/StoreScreen.tsx(1,53): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/screens/StoreScreen.tsx(2,106): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/screens/StoreScreen.tsx(3,30): error TS2307: Cannot find module 'react-native-safe-area-context' or its corresponding type declarations.
+src/screens/StoreScreen.tsx(4,27): error TS2307: Cannot find module 'expo-location' or its corresponding type declarations.
+src/screens/StoreScreen.tsx(5,76): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/screens/StoreScreen.tsx(158,28): error TS2322: Type '{ key: string; product: Product; onPress: () => void; onAdd: () => void; showAdd: false; accentColor: string; }' is not assignable to type '{ product: Product; onPress: () => void; onAdd: () => void; accentColor?: string; showAdd?: boolean; }'.
+  Property 'key' does not exist on type '{ product: Product; onPress: () => void; onAdd: () => void; accentColor?: string; showAdd?: boolean; }'.
+src/screens/StoreScreen.tsx(162,73): error TS2322: Type '{ key: string; order: StoreOrder; }' is not assignable to type '{ order: StoreOrder; }'.
+  Property 'key' does not exist on type '{ order: StoreOrder; }'.
+src/screens/StoreScreen.tsx(177,53): error TS2322: Type '{ key: string; label: string; active: boolean; onPress: () => any; accentColor: string; }' is not assignable to type '{ label: string; active: boolean; onPress: () => void; accentColor?: string; }'.
+  Property 'key' does not exist on type '{ label: string; active: boolean; onPress: () => void; accentColor?: string; }'.
+src/screens/StoreScreen.tsx(192,17): error TS2322: Type '{ key: any; product: any; accentColor: string; showAdd: true; onPress: () => any; onAdd: () => void; }' is not assignable to type '{ product: Product; onPress: () => void; onAdd: () => void; accentColor?: string; showAdd?: boolean; }'.
+  Property 'key' does not exist on type '{ product: Product; onPress: () => void; onAdd: () => void; accentColor?: string; showAdd?: boolean; }'.
+src/screens/StoreScreen.tsx(231,170): error TS2322: Type '{ key: string; label: string; active: boolean; onPress: () => any; accentColor: string; }' is not assignable to type '{ label: string; active: boolean; onPress: () => void; accentColor?: string; }'.
+  Property 'key' does not exist on type '{ label: string; active: boolean; onPress: () => void; accentColor?: string; }'.
+src/screens/SubscriptionScreen.tsx(1,42): error TS2307: Cannot find module 'react' or its corresponding type declarations.
+src/screens/SubscriptionScreen.tsx(11,8): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/screens/SubscriptionScreen.tsx(12,30): error TS2307: Cannot find module 'react-native-safe-area-context' or its corresponding type declarations.
+src/screens/SubscriptionScreen.tsx(13,26): error TS2307: Cannot find module '@react-native-async-storage/async-storage' or its corresponding type declarations.
+src/screens/SubscriptionScreen.tsx(14,93): error TS2307: Cannot find module 'lucide-react-native' or its corresponding type declarations.
+src/services/AccidentEmergencyService.ts(1,27): error TS2307: Cannot find module 'expo-location' or its corresponding type declarations.
+src/services/AccidentEmergencyService.ts(2,22): error TS2307: Cannot find module 'expo-sms' or its corresponding type declarations.
+src/services/AccidentSignalBridge.ts(1,57): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+src/services/accidentSettingsStore.ts(1,25): error TS2307: Cannot find module 'expo-sqlite' or its corresponding type declarations.
+src/services/billingStore.ts(1,25): error TS2307: Cannot find module 'expo-sqlite' or its corresponding type declarations.
+src/services/billingStore.ts(2,36): error TS2307: Cannot find module 'react-native' or its corresponding type declarations.
+supabaseClient.ts(1,30): error TS2307: Cannot find module '@supabase/supabase-js' or its corresponding type declarations.

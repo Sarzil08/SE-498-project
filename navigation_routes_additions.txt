@@ -1,0 +1,11 @@
+No manual navigation-route addition is required when using the included App.tsx.
+
+App.tsx already registers:
+  ServiceHistory -> ServiceHistoryScreen
+  NotificationScreen -> NotificationScreen
+
+The included src/navigation/AppNavigator.tsx also registers both routes.
+
+Exact route names used by the screens:
+  navigation.navigate('ServiceHistory', { role: 'customer' | 'mechanic' | 'b2b' | 'driver' })
+  navigation.navigate('NotificationScreen', { role: 'customer' | 'mechanic' | 'b2b' | 'driver' })

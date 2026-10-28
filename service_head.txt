@@ -1,0 +1,280 @@
+import React, { useEffect, useState } from 'react';
+import {
+  ActivityIndicator,
+  Alert,
+  Modal,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { Activity as ActivityIcon, Car, CheckCircle2, Clock3, DollarSign, MapPin, ShieldCheck } from 'lucide-react-native';
+import * as Location from 'expo-location';
+import LiveMap from '../components/LiveMap';
+import VehicleHealth from '../components/VehicleHealth';
+import EmergencyMechanicRequest, { Mechanic } from '../components/EmergencyMechanicRequest';
+import PaymentBox from '../components/PaymentBox';
+import ReviewReportBox from '../components/ReviewReportBox';
+import {
+  AppHeader,
+  BottomNavigation,
+  QuickActionCard,
+  RoleBadge,
+  StatCard,
+  StatusBadge,
+} from '../components';
+import { AppRole, ROLE_MAP } from '../components/RoleBadge';
+import { useUnreadNotifications } from '../hooks/useUnreadNotifications';
+import { addNotification } from '../components/notificationStore';
+import { addServiceHistory } from '../components/serviceHistoryStore';
+import { useLanguage, tr } from '../context/LanguageContext';
+
+export default function ServiceScreen({ route, navigation }: any) {
+  const role: AppRole = route?.params?.role || 'customer';
+  const accent = ROLE_MAP[role].color;
+  const unread = useUnreadNotifications(role);
+
+  if (role === 'mechanic') {
+    return <MechanicServiceScreen navigation={navigation} accent={accent} unread={unread} />;
+  }
+
+  if (role === 'b2b') {
+    return <B2BServiceScreen navigation={navigation} accent={accent} unread={unread} />;
+  }
+
+  return (
+    <BuyerServiceScreen
+      role={role}
+      navigation={navigation}
+      accent={accent}
+      unread={unread}
+      userId={route?.params?.userId || `${role}-demo`}
+    />
+  );
+}
+
+type BuyerServiceProps = {
+  role: 'customer' | 'driver';
+  navigation: any;
+  accent: string;
+  unread: number;
+  userId: string;
+};
+
+function BuyerServiceScreen({ role, navigation, accent, unread, userId }: BuyerServiceProps) {
+  const { language } = useLanguage();
+  const isDriver = role === 'driver';
+  const vehicle = isDriver ? 'Delivery Truck X-12' : 'Toyota Axio';
+
+  const [location, setLocation] = useState({ latitude: 23.8103, longitude: 90.4125 });
+  const [requestStatus, setRequestStatus] = useState<'idle' | 'searching' | 'list' | 'accepted'>('idle');
+  const [selectedProblems, setSelectedProblems] = useState<string[]>([]);
+  const [filteredMechanics, setFilteredMechanics] = useState<Mechanic[]>([]);
+  const [selectedMechanic, setSelectedMechanic] = useState<Mechanic | null>(null);
+  const [hasExtraBill, setHasExtraBill] = useState(false);
+  const [extraCharges, setExtraCharges] = useState(0);
+  const [isExtraBillConfirmed, setIsExtraBillConfirmed] = useState(false);
+  const [isBillPaid, setIsBillPaid] = useState(false);
+  const [isPaymentVisible, setIsPaymentVisible] = useState(false);
+  const [isRatingVisible, setIsRatingVisible] = useState(false);
+  const [requestId, setRequestId] = useState(() => `service-${Date.now()}`);
+  const [isLocationLoading, setIsLocationLoading] = useState(false);
+  const pendingAmount = 500;
+
+  const loadLocation = async () => {
+    setIsLocationLoading(true);
+    try {
+      const { status } = await Location.requestForegroundPermissionsAsync();
+
+      if (status === 'granted') {
+        const pos = await Location.getCurrentPositionAsync({
+          accuracy: Location.Accuracy.Balanced,
+        });
+        setLocation({
+          latitude: pos.coords.latitude,
+          longitude: pos.coords.longitude,
+        });
+      }
+    } catch (error) {
+      console.log('Service location:', error);
+    } finally {
+      setIsLocationLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    if (requestStatus !== 'accepted' || hasExtraBill) return;
+
+    const timer = setTimeout(() => {
+      setHasExtraBill(true);
+      setExtraCharges(300);
+      Alert.alert(
+        tr(language, 'Extra bill', 'অতিরিক্ত বিল'),
+        tr(
+          language,
+          'Mechanic added ৳300 for parts.',
+          'মেকানিক পার্টস বাবদ ৳৩০০ অতিরিক্ত বিল যোগ করেছেন।'
+        )
+      );
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, [requestStatus, hasExtraBill, language]);
+
+  const toggleProblem = (id: string) => {
+    setSelectedProblems(prev =>
+      prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id]
+    );
+  };
+
+  const findMechanic = (mode: 'manual' | 'auto', list: Mechanic[]) => {
+    if (!selectedProblems.length) {
+      Alert.alert(
+        tr(language, 'Select a problem', 'সমস্যা সিলেক্ট করুন'),
+        tr(
+          language,
+          'Please select at least one vehicle problem.',
+          'অন্তত একটি গাড়ির সমস্যা সিলেক্ট করুন।'
+        )
+      );
+      return;
+    }
+
+    setRequestStatus('searching');
+
+    setTimeout(() => {
+      setFilteredMechanics(list);
+      if (mode === 'auto' && list.length) {
+        selectMechanic(list[0]);
+      } else {
+        setRequestStatus('list');
+      }
+    }, 900);
+  };
+
+  const selectMechanic = async (mechanic: Mechanic) => {
+    setRequestId(`service-${Date.now()}-${mechanic.id}`);
+    setSelectedMechanic(mechanic);
+    setRequestStatus('accepted');
+    setHasExtraBill(false);
+    setExtraCharges(0);
+    setIsExtraBillConfirmed(false);
+    setIsBillPaid(false);
+
+    // Refresh location when the mechanic is accepted so the route line starts
+    // from the latest available position.
+    await loadLocation();
+  };
+
+  const finishReview = () => {
+    if (selectedMechanic) {
+      const total = pendingAmount + extraCharges;
+
+      addServiceHistory({
+        role,
+        title: 'Roadside assistance',
+        date: new Date().toLocaleDateString('en-GB', {
+          day: '2-digit',
+          month: 'short',
+          year: 'numeric',
+        }),
+        partner: selectedMechanic.name,
+        amount: `৳${total.toLocaleString('en-BD')}`,
+        status: 'completed',
+        vehicle,
+        location: 'Dhaka',
+      });
+
+      addNotification({
+        role,
+        title: 'Service completed',
+        message: `${selectedMechanic.name} completed your roadside service. History updated.`,
+        kind: 'service',
+      });
+    }
+
+    setIsRatingVisible(false);
+    setRequestStatus('idle');
+    setSelectedMechanic(null);
+    setSelectedProblems([]);
+    setFilteredMechanics([]);
+  };
+
+  return (
+    <SafeAreaView style={styles.container}>
+      <StatusBar barStyle="light-content" backgroundColor="#06111F" />
+
+      <AppHeader
+        name={isDriver ? 'Driver Service' : 'Vehicle Service'}
+        email={ROLE_MAP[role].label}
+        role={role}
+        navigation={navigation}
+        notificationCount={unread}
+        onBack={() => navigation.goBack()}
+        onProfile={() => navigation.navigate('ProfileScreen', { role, userId })}
+        showSOS={false}
+      />
+
+      <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
+        <View style={[styles.pageBanner, { borderColor: accent }]}>
+          <View style={[styles.bannerIcon, { backgroundColor: `${accent}22` }]}>
+            <ActivityIcon size={22} color={accent} />
+          </View>
+          <View style={{ flex: 1 }}>
+            <Text style={styles.bannerTitle}>
+              {tr(language, 'Service Center', 'সার্ভিস সেন্টার')}
+            </Text>
+            <Text style={styles.bannerSub}>
+              {tr(
+                language,
+                'Vehicle health and mechanic assistance are managed here.',
+                'এখানেই গাড়ির হেলথ ও মেকানিক সার্ভিসের পুরো কাজ হবে।'
+              )}
+            </Text>
+          </View>
+          <RoleBadge role={role} />
+        </View>
+
+        {/* Full vehicle health belongs to Service, not Home. */}
+        <Text style={styles.sectionTitle}>
+          {tr(language, 'Vehicle Health', 'গাড়ির হেলথ')}
+        </Text>
+        <VehicleHealth driverId={isDriver ? 'v1' : 'c1'} />
+
+        <Text style={styles.sectionTitle}>
+          {tr(language, 'Find a Mechanic', 'মেকানিক খুঁজুন')}
+        </Text>
+        <EmergencyMechanicRequest
+          requestStatus={requestStatus}
+          selectedProblems={selectedProblems}
+          detectedProblemTypes={[]}
+          filteredMechanics={filteredMechanics}
+          selectedMechanic={selectedMechanic}
+          hasExtraBill={hasExtraBill}
+          isExtraBillConfirmed={isExtraBillConfirmed}
+          isBillPaid={isBillPaid}
+          pendingAmount={pendingAmount}
+          extraCharges={extraCharges}
+          customerVehicle="Car"
+          showAcceptedDetails={false}
+          onToggleProblem={toggleProblem}
+          onFindMechanic={findMechanic}
+          onSelectMechanic={selectMechanic}
+          onRequestStatusChange={setRequestStatus}
+          onConfirmExtraBill={() => setIsExtraBillConfirmed(true)}
+          onOpenPayment={() => {
+            if (hasExtraBill && !isExtraBillConfirmed) {
+              Alert.alert(
+                tr(language, 'Confirm extra bill', 'অতিরিক্ত বিল কনফার্ম করুন'),
+                tr(
+                  language,
+                  'Confirm the extra bill before payment.',
+                  'পেমেন্টের আগে অতিরিক্ত বিল কনফার্ম করুন।'
+                )
+              );
+              return;
+            }
+            setIsPaymentVisible(true);

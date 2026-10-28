@@ -1,0 +1,6 @@
+{
+  "name": "On-Demand Roadside Assistance Hub",
+  "description": "High-fidelity interactive mobile simulator for Bangladeshi Roadside Assistance platform with dynamic sign-up workflows, simulated OCR, biometrics, 1-click developer bypasses to fully interactive dashboards, and complete ready-to-run React Native Expo + Supabase code exporter.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

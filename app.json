@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "Car Rescue BD",
+    "slug": "car-rescue-bd",
+    "scheme": "carrescuebd",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.carrescuebd.app"
+    },
+    "android": {
+      "package": "com.carrescuebd.app",
+      "icon": "./assets/images/icon.png",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#111827"
+      },
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyDZjprZB4Bm-VNp8Fu77FmyZJIka-eiU5Q"
+        }
+      }
+    },
+    "plugins": [
+      "expo-sqlite"
+    ]
+  }
+}
